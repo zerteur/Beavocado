@@ -1,0 +1,19 @@
+{
+  "name": "express-experiment",
+  "version": "1.0.0",
+  "description": "projet for my learning",
+  "main": "server.js",
+  "scripts": {
+    "test": "supervisor server.js"
+  },
+  "author": "Zerteur",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7",
+    "nunjucks": "^3.2.3",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.5.0",
+    "supervisor": "^0.12.0"
+  }
+}

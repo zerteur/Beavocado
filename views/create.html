@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<form role="form" action="/store" method="post">
+
+				<div class="form-group mt-3">
+					<label for="titre">Titre</label>
+					<input type="text" name="titre" class="form-control" placeholder="Titre de l'article" required>
+				</div>
+
+				<div class="form-group mt-2">
+					<label for="contenu">Contenu</label>
+					<textarea name="contenu" class="form-control" placeholder="Contenu de l'article" rows="3" style="resize: none;" required></textarea>
+				</div>
+
+				<div class="form-group mt-1">
+					<label for="miniature">Miniature</label>
+					<div>
+						<label>URL:</label>
+						<input type="text" name="miniature">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-outline-dark m-3">Créer</button>
+			</form>		
+		</div>
+	</div>
+</div>
+{% endblock %}

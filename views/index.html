@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+{% for article in articles %}
+		<div class="col-3 d-flex mt-3">
+			<div class="card" style="width: 100%">
+				<img class="card-img-top" src="{{article.image}}" alt="Thumbnails Not Found">
+				<div class="card-body">
+						<h5 class="card-title">{{article.title}}</h5>
+						<a class="btn btn-outline-dark float-start" href="/article/{{article.id}}">Aller à l'article</a>
+						<label class="float-end">{{article.updated}}</label>
+				</div>
+			</div>
+		</div>
+{% endfor %}
+	</div>
+</div>
+{% endblock %}

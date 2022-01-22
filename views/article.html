@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<span class="float-end m-3"><a href="/destroy/{{article.id}}" class="btn btn-outline-dark remove rounded-circle">X</a></span>
+			<h1>{{article.title}}</h1>
+			<p>{{article.content}}</p>
+
+			<span>Mis à jour {{article.updated.getDate()}} / {{article.updated.getMonth()+1}} / {{article.updated.getFullYear()}}</span>
+			<span class="m-3 float-end"><a href="/edit/{{article.id}}" class="btn btn-outline-dark">Modifier</a></span>
+		</div>
+	</div>
+</div>
+{% endblock %}

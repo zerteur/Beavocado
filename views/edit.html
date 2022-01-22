@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<form role="form" action="/update/{{article.id}}" method="post">
+
+				<div class="form-group">
+					<label for="titre">Titre</label>
+					<input type="text" name="titre" value="{{article.title}}" class="form-control" placeholder="Titre de l'article" required>
+				</div>
+
+				<div class="form-group">
+					<label for="contenu">Contenu</label>
+					<textarea name="contenu" class="form-control" placeholder="Contenu de l'article" rows="3" style="resize: none;" required>{{article.content}}</textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="miniature">Miniature</label>
+					<div>
+						<label>URL:</label>
+						<input type="text" value="{{article.image}}" name="miniature">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-outline-dark m-3">Modifier</button>
+			</form>	
+		</div>
+	</div>
+</div>
+{% endblock %}
